@@ -1,0 +1,12 @@
+package com.simpletestapi.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.simpletestapi.repository.ClientRepository;
+
+@RestController
+public class ClientController {
+	
+	@Autowired
+	private ClientRepository clientRepository;
+}

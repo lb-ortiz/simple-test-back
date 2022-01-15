@@ -1,0 +1,5 @@
+package com.simpletestapi.enums;
+
+public enum StatusClient {
+
+}

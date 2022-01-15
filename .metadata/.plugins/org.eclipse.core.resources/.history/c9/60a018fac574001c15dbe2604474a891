@@ -1,0 +1,20 @@
+package com.simpletestapi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SimpleTestApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SimpleTestApiApplication.class, args);
+		//executa quando inicia a aplicação 
+//		@Bean
+//		CommandLineRunner initDataBase(CourseRepository courseRepository) {
+//			return args -> {
+//				courseRepository.deleteAll();
+//			};
+//		}
+	}
+
+}

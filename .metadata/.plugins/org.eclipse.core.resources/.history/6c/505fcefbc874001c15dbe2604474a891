@@ -1,0 +1,34 @@
+package com.simpletestapi;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.simpletestapi.enums.StatusClientEnum;
+import com.simpletestapi.model.Client;
+import com.simpletestapi.repository.ClientRepository;
+
+@SpringBootApplication
+public class SimpleTestApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SimpleTestApiApplication.class, args);
+
+	}
+
+	// executa quando inicia a aplicação
+	@Bean
+	CommandLineRunner initDataBase(ClientRepository clientRepository) {
+		return args -> {
+			clientRepository.deleteAll();
+			List<Client> list = new ArrayList<>();
+
+			list.add(new Client("ze", "11111", "José", StatusClientEnum.ATIVADO.toString()));
+		};
+	}
+
+}

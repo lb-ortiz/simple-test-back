@@ -1,0 +1,12 @@
+package com.simpletestapi.model;
+
+import com.simpletestapi.enums.StatusClientEnum;
+
+public class Client {
+	private Long id;
+	private String nickname;
+	private String inscription;
+	private String name;
+	private StatusClientEnum status;
+  // email: Email;
+}

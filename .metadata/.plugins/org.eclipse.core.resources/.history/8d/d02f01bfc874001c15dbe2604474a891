@@ -1,0 +1,33 @@
+package com.simpletestapi;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.simpletestapi.repository.ClientRepository;
+
+@SpringBootApplication
+public class SimpleTestApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SimpleTestApiApplication.class, args);
+
+	}
+
+	// executa quando inicia a aplicação
+	@Bean
+	CommandLineRunner initDataBase(ClientRepository clientRepository) {
+		return args -> {
+			clientRepository.deleteAll();
+			List<Client> list = new ArrayList<>();
+
+			list.add(new Course("", "", "", ""));
+			list.add(new Course("", "", "", ""));
+			list.add(new Course("", "", "", ""));
+			list.add(new Course("", "", "", ""));
+			list.add(new Course("", "", "", ""));
+		};
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.simpletestapi.model;
+
+public class Email {
+
+	
+	private String id;
+	private String categoria;
+	private String nome;
+	private String email;
+}

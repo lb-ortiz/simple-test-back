@@ -1,0 +1,10 @@
+package com.simpletestapi.repository;
+
+public interface EmailRepository {
+	
+	private String id;
+	private String categoria;
+	private String nome;
+	private String email;
+
+}

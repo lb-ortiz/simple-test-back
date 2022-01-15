@@ -1,0 +1,5 @@
+package com.simpletestapi.model;
+
+public interface Email {
+
+}

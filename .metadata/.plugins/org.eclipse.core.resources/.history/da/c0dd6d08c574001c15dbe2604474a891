@@ -1,0 +1,45 @@
+package com.simpletestapi.model;
+
+import com.simpletestapi.enums.StatusClientEnum;
+
+public class Client {
+	private Long id;
+	private String nickname;
+	private String inscription;
+	private String name;
+	private StatusClientEnum status;
+  // email: Email;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getInscription() {
+		return inscription;
+	}
+	public void setInscription(String inscription) {
+		this.inscription = inscription;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public StatusClientEnum getStatus() {
+		return status;
+	}
+	public void setStatus(StatusClientEnum status) {
+		this.status = status;
+	}
+	
+	
+}

@@ -1,0 +1,7 @@
+package com.simpletestapi.repository;
+
+public interface EmailRepository {
+	
+
+
+}
