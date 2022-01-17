@@ -33,7 +33,7 @@ public class Client {
 	@Column(name = "STATUS")
 	private StatusClientEnum status;
 	
-	@OneToMany(mappedBy="idCLient")
+	@OneToMany(mappedBy="id")
     private Set<Email> emails;
 
 	public Client() {}
@@ -94,17 +94,9 @@ public class Client {
 		this.status = status;
 	}
 
-	public Set<Email> getEmails() {
-		return emails;
-	}
-
-	public void setEmails(Set<Email> emails) {
-		this.emails = emails;
-	}
-
 	@Override
 	public int hashCode() {
-		return Objects.hash(emails, id, inscription, name, nickname, status);
+		return Objects.hash(id, inscription, name, nickname, status);
 	}
 
 	@Override
@@ -116,12 +108,10 @@ public class Client {
 		if (getClass() != obj.getClass())
 			return false;
 		Client other = (Client) obj;
-		return Objects.equals(emails, other.emails) && Objects.equals(id, other.id)
-				&& Objects.equals(inscription, other.inscription) && Objects.equals(name, other.name)
-				&& Objects.equals(nickname, other.nickname) && status == other.status;
+		return Objects.equals(id, other.id) && Objects.equals(inscription, other.inscription)
+				&& Objects.equals(name, other.name) && Objects.equals(nickname, other.nickname)
+				&& status == other.status;
 	}
-
-	
 
 
 }

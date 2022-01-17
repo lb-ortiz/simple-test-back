@@ -27,4 +27,18 @@ public class ClientController {
 	public List<Client> list() {
 		return clientRepository.findAll();
 	}
+	
+	//@RequestMapping(value = "deleteClient", method = RequestMethod.POST)
+	//@Transactional
+	//public String delpost(@ModelAttribute Client client) {
+
+		//try {
+			//Client client = clientRepository.findOne(client.getId());
+			//clientRepository.deleteById(client.getId());
+			//return "deleteDirectorSuccess-view";
+		//} catch (Exception e) {
+
+		//}
+		//return "deleteDirectorError-view";
+	//}
 }
