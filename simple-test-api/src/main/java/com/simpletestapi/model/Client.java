@@ -28,6 +28,9 @@ public class Client {
 
 	@Column(name = "NAME")
 	private String name;
+	
+	@Column(name = "IMAGE")
+	private String image;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "STATUS")
@@ -38,20 +41,22 @@ public class Client {
 
 	public Client() {}
 	
-	public Client(Long id, String nickname, String inscription, String name, StatusClientEnum status) {
+	public Client(Long id, String nickname, String inscription, String name, StatusClientEnum status, String image) {
 		super();
 		this.id = id;
 		this.nickname = nickname;
 		this.inscription = inscription;
 		this.name = name;
 		this.status = status;
+		this.image = image;
 	}
 
-	public Client(String nickname, String inscription, String name, StatusClientEnum status) {
+	public Client(String nickname, String inscription, String name, StatusClientEnum status, String image) {
 		this.nickname = nickname;
 		this.inscription = inscription;
 		this.name = name;
 		this.status = status;
+		this.image = image;
 	}
 
 	public Long getId() {
@@ -102,9 +107,17 @@ public class Client {
 		this.emails = emails;
 	}
 
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(emails, id, inscription, name, nickname, status);
+		return Objects.hash(emails, id, image, inscription, name, nickname, status);
 	}
 
 	@Override
@@ -117,11 +130,8 @@ public class Client {
 			return false;
 		Client other = (Client) obj;
 		return Objects.equals(emails, other.emails) && Objects.equals(id, other.id)
-				&& Objects.equals(inscription, other.inscription) && Objects.equals(name, other.name)
-				&& Objects.equals(nickname, other.nickname) && status == other.status;
+				&& Objects.equals(image, other.image) && Objects.equals(inscription, other.inscription)
+				&& Objects.equals(name, other.name) && Objects.equals(nickname, other.nickname)
+				&& status == other.status;
 	}
-
-	
-
-
 }
