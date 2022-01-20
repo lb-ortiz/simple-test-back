@@ -25,7 +25,7 @@ public class Email {
 	private String email;
 
 	@Column(name = "idClient")
-	private Long idCLient;
+	private Long idClient;
 	
 	public Email() {}
 
@@ -35,14 +35,14 @@ public class Email {
 		this.occupation = occupation;
 		this.name = name;
 		this.email = email;
-		this.idCLient = idClient;
+		this.idClient = idClient;
 	}
 
 	public Email(String occupation, String name, String email, Long idClient) {
 		this.occupation = occupation;
 		this.name = name;
 		this.email = email;
-		this.idCLient = idClient;
+		this.idClient = idClient;
 	}
 
 	public Long getId() {
@@ -77,17 +77,17 @@ public class Email {
 		this.email = email;
 	}
 
-	public Long getIdCLient() {
-		return idCLient;
+	public Long getIdClient() {
+		return idClient;
 	}
 
-	public void setIdCLient(Long idCLient) {
-		this.idCLient = idCLient;
+	public void setIdClient(Long idCLient) {
+		this.idClient = idCLient;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, id, idCLient, name, occupation);
+		return Objects.hash(email, id, idClient, name, occupation);
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class Email {
 			return false;
 		Email other = (Email) obj;
 		return Objects.equals(email, other.email) && Objects.equals(id, other.id)
-				&& Objects.equals(idCLient, other.idCLient) && Objects.equals(name, other.name)
+				&& Objects.equals(idClient, other.idClient) && Objects.equals(name, other.name)
 				&& Objects.equals(occupation, other.occupation);
 	}
 

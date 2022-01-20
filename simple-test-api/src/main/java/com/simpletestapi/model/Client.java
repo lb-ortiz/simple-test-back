@@ -36,7 +36,7 @@ public class Client {
 	@Column(name = "STATUS")
 	private StatusClientEnum status;
 	
-	@OneToMany(mappedBy="idCLient")
+	@OneToMany(mappedBy="idClient")
     private Set<Email> emails;
 
 	public Client() {}
